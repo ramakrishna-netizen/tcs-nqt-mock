@@ -1,16 +1,69 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# TCS NQT Mock Test Clone
 
-Currently, two official plugins are available:
+A full-stack mock application replicating the TCS National Qualifier Test environment.
+This project includes a React/Vite frontend and a Python (Flask) backend and is intended for local development,
+demo purposes and learning how to connect a client to a server.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📁 Project Structure
 
-## React Compiler
+```
+├─ backend/        # Flask server
+│  ├─ app.py        # main API entry point
+│  └─ requirements.txt
+├─ public/         # Static frontend assets
+└─ src/            # React components and styles
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Getting Started
 
-## Expanding the ESLint configuration
+### Prerequisites
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Node.js 16+
+- Python 3.10+
+- Git
+
+### Setup Instructions
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/ramakrishna-netizen/tcs-nqt-mock.git
+   cd tcs-nqt-mock
+   ```
+
+2. **Backend**
+   ```bash
+   cd backend
+   python -m venv venv
+   # activate the environment
+   # Windows:
+   .\venv\Scripts\activate
+   # macOS/Linux:
+   # source venv/bin/activate
+   pip install -r requirements.txt
+   python app.py
+   ```
+   The API will run at `http://localhost:5000` by default.
+
+3. **Frontend**
+   ```bash
+   cd ../
+   npm install
+   npm run dev
+   ```
+   Open the browser at the URL printed by Vite (typically `http://localhost:5173`).
+
+## 🧰 Available Scripts
+
+- `npm run dev` – start the frontend in development mode with hot reloading.
+- `npm run build` – bundle the frontend for production.
+- `python app.py` – launch the Flask backend.
+
+## 📝 Notes
+
+- Environment variables (e.g. API URL) can be configured using a `.env` file or shell exports.
+- Update `.gitignore` if additional directories/files should be excluded from version control.
+
+## 📄 License
+
+MIT © 2026
