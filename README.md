@@ -64,6 +64,3 @@ demo purposes and learning how to connect a client to a server.
 - Environment variables (e.g. API URL) can be configured using a `.env` file or shell exports.
 - Update `.gitignore` if additional directories/files should be excluded from version control.
 
-## 📄 License
-
-MIT © 2026
